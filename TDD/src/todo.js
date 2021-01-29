@@ -8,6 +8,11 @@ class Todo {
     this.status = ''
     this.id = uuid.v4()
   }
+
+  isValid () {
+    // !! converte valor explicitamente para bool
+    return !!this.text && !isNaN(this.when.valueOf())
+  }
 }
 
 module.exports = Todo
